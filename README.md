@@ -2,7 +2,7 @@
 
 ## Cryptocurrency Volatility Forecasting
 
-Predict future price turbulence for 50+ cryptocurrencies using engineered technical indicators and tree-based regression. The target variable is the 7-day forward realized volatility computed from log returns; the workflow covers data prep, exploratory analysis, model training/tuning, evaluation, and a lightweight Streamlit interface.
+Predict future price turbulence for 50+ cryptocurrencies using engineered technical indicators and tree-based regression. The target variable is the 7-day forward realized volatility computed from [...]
 
 ## Dataset
 - Source: `data/raw/cryptocurrency_prices.csv` (daily OHLCV + market cap per asset).
@@ -61,6 +61,7 @@ Predict future price turbulence for 50+ cryptocurrencies using engineered techni
 ## Streamlit Community Cloud
 - App entry point: `app/streamlit_app.py`
 - Dependency file: `requirements.txt`
+- Live demo: [Crypto Volatility Radar (hosted)](https://pwcryptoproject-ws5wckxejtxzvmjfdvwmhw.streamlit.app/#crypto-volatility-radar)
 
 ## Pipeline Summary
 1. **Ingestion** – load raw OHLCV + market cap, enforce schema, and repair gaps via asset-wise time interpolation.
