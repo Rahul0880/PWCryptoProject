@@ -24,12 +24,26 @@ st.set_page_config(page_title="Crypto Volatility Radar", page_icon="📈", layou
 
 @st.cache_resource(show_spinner=False)
 def load_model():
-    return joblib.load(PIPELINE_ARTIFACT)
+    try:
+        return joblib.load(PIPELINE_ARTIFACT)
+    except FileNotFoundError:
+        st.error(
+            "Model artifact not found. For Streamlit Cloud, commit `models/volatility_pipeline.pkl` "
+            "(or run `python -m src.model_training` to generate it locally)."
+        )
+        st.stop()
 
 
 @st.cache_data(show_spinner=False)
 def load_dataset():
-    return pd.read_parquet(DATA_PROCESSED)
+    try:
+        return pd.read_parquet(DATA_PROCESSED)
+    except FileNotFoundError:
+        st.error(
+            "Processed feature store not found. For Streamlit Cloud, commit `data/processed/volatility_features.parquet` "
+            "(or run `python -m src.data_preprocessing` to generate it locally)."
+        )
+        st.stop()
 
 
 def _feature_names(model) -> np.ndarray:

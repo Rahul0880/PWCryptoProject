@@ -23,6 +23,10 @@ Thumbs.db
 data/processed/
 *.parquet
 
+# Streamlit Cloud needs these artifacts; allow-list them
+!data/processed/
+!data/processed/volatility_features.parquet
+
 # Raw data files (keep out of repo unless you intend to publish them)
 data/raw/*.csv
 dataset.csv
@@ -30,6 +34,9 @@ dataset.csv
 # Model artifacts
 models/*.pkl
 models/*.joblib
+
+# Streamlit Cloud needs these artifacts; allow-list them
+!models/volatility_pipeline.pkl
 
 # Logs
 *.log
