@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Data artifacts (do not commit large/derived data)
+data/processed/
+*.parquet
+
+# Raw data files (keep out of repo unless you intend to publish them)
+data/raw/*.csv
+dataset.csv
+
+# Model artifacts
+models/*.pkl
+models/*.joblib
+
+# Logs
+*.log
+
+# Streamlit
+.streamlit/secrets.toml
+
+# PDFs / misc
+*.pdf

@@ -1,0 +1,12 @@
+{
+  "rmse": 0.07675440484604323,
+  "mae": 0.026829425411677595,
+  "r2": 0.0649684712442693,
+  "best_params": {
+    "model__l2_regularization": 0.017885301261862014,
+    "model__learning_rate": 0.010405384007798954,
+    "model__max_depth": 3,
+    "model__max_leaf_nodes": 28,
+    "model__min_samples_leaf": 28
+  }
+}
